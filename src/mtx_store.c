@@ -16,6 +16,11 @@ typedef struct _mtx_store {
 } t_mtx_store;
 
 
+void mtx_store_free(t_mtx_store *x) {
+    if (x->matrix != NULL) {
+        matrix_free(x->matrix);
+    }
+}
 
 void mtx_store_list(t_mtx_store *x,
                     t_symbol *s,
@@ -123,7 +128,7 @@ void mtx_store_setup(void)
     mtx_store_class = class_new(
         gensym("mtx_store"),
         (t_newmethod)mtx_store_new,
-        0,
+        (t_method)mtx_store_free,
         sizeof(t_mtx_store),
         CLASS_DEFAULT,
         0
