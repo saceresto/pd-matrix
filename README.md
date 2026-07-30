@@ -19,6 +19,7 @@ A matrix list uses this order:
 - mtx_print: Displays a matrix grid in the Pure Data console.
 - mtx_add: Adds two matrix lists together.
 - mtx_transpose: Transposes a matrix list.
+- mtx_mult: Multiplies two matrix lists together.
 
 ## System Features
 - Header Validation: Verifies matrix dimensions before processing data.
