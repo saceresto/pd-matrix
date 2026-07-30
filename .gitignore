@@ -1,0 +1,8 @@
+*.pd_linux
+*.pd_darwin
+*.dll
+*.so
+*.o
+.DS_Store
+*.swp
+*~
